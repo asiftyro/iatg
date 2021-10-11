@@ -1,0 +1,224 @@
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta http-equiv="content-type" content="text/html; charset=UTF-8">
+    <meta charset="utf-8">
+    <title>Form</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css"> 
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+    
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/tempusdominus-bootstrap-4/5.39.0/css/tempusdominus-bootstrap-4.min.css" integrity="sha512-3JRrEUwaCkFUBLK1N8HehwQgu8e23jTH4np5NHOmQOobuC4ROQxFwFgBLTnhcnQRMs84muMh0PnnwXlPq5MGjg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.29.1/moment.min.js" integrity="sha512-qTXRIMyZIFb8iQcfjXWCO8+M5Tbc38Qi5WzdPOYZHIlZpzBHG3L3by84BBBOiRGiEb7KKtAOAs5qYdUiZiQNNQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+
+
+   <script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/tempusdominus-bootstrap-4/5.39.0/js/tempusdominus-bootstrap-4.min.js" integrity="sha512-k6/Bkb8Fxf/c1Tkyl39yJwcOZ1P4cRrJu77p83zJjN2Z55prbFHxPs9vN7q3l3+tSMGPDdoH51AEU8Vgo1cgAA==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+
+
+
+
+
+
+  </head>
+  <body>
+    <div class="container">
+
+        <h3 class="mt-4">Create Incident Alert</h3>
+
+        <form>
+
+
+
+
+
+
+          <div class="form-group row">
+            <label for="issue_details" class="col-4 col-form-label">Issue details</label> 
+            <div class="col-8">
+              <input id="issue_details" name="issue_details" type="text" class="form-control">
+            </div>
+          </div>
+
+
+
+          <div class="form-group row">
+            <label for="priority" class="col-4 col-form-label">Pririty</label> 
+            <div class="col-8">
+              <select id="priority" name="priority" class="form-control">
+                <option value="High">High</option>
+                <option value="Medium">Medium</option>
+                <option value="Medium">Low</option>
+              </select>
+            </div>
+          </div> 
+
+
+          <div class="form-group row">
+            <label for="service_provider" class="col-4 col-form-label">Service Provider/Issue Origin</label> 
+            <div class="col-8">
+              <select id="service_provider" name="service_provider" class="form-control">
+                <option value="GP">GP</option>
+                <option value="ROBI-AIR">ROBI-AIR</option>
+                <option value="TT">TT</option>
+                <option value="BL">BL</option>
+                <option value="DESCO">DPDC</option>
+                <option value="DESCO">DESCO</option>
+                <option value="NAGAD">NAGAD</option>
+                <option value="DBBL">DBBL</option>
+                <option value="METRONET">METRONET</option>
+                <option value="METRONET">SSL</option>
+				<option value="Client">Client</option>
+              </select>
+            </div>
+          </div>
+
+          <div class="form-group row">
+            <label for="impact" class="col-4 col-form-label">Impact/Affect</label> 
+            <div class="col-8">
+              <select id="impact" name="impact" class="form-control">
+                <option value="Partial">Partial</option>
+                <option value="Full">Full</option>
+                <option value="None">None</option>
+              </select>
+            </div>
+          </div>
+
+
+
+          <div class="form-group row">
+            <label for="issue_details" class="col-4 col-form-label">Affected Client</label> 
+            <div class="col-8">
+              <input id="imapcted_client" name="imapcted_client" type="text" class="form-control">
+            </div>
+          </div>
+
+
+
+
+          <div class="form-group row">
+            <label for="action_taken" class="col-4 col-form-label">Action taken</label> 
+            <div class="col-8">
+              <select multiple="multiple" id="action_taken" name="action_taken" class="form-control">
+                <option value="None">None</option>
+                <option value="Escaleted to Service Provider">Escaleted to Service Provider</option>
+                <option value="Escaleted to Service Operation">Escaleted to Service Operation</option>
+                <option value="Escaleted to Network and System">Escaleted to Network and System</option>
+                <option value="Escaleted to Engg">Escaleted to Engg</option>
+				<option value="Escaleted to Client">Escaleted to Client</option>
+              </select>
+            </div>
+          </div>
+
+          <div class="form-group row">
+            <label for="client_communication" class="col-4 col-form-label">Client communicated?</label> 
+            <div class="col-8">
+              <select id="client_communication" name="client_communication" class="form-control">
+                <option value="No">No</option>
+                <option value="Yes">Yes</option>
+              </select>
+            </div>
+          </div> 
+
+
+
+          <div class="form-group row">
+            <label for="client_communication" class="col-4 col-form-label">Status</label> 
+            <div class="col-8">
+              <select id="Status" name="issue_status" class="form-control">
+                <option value="No">Open</option>
+                <option value="Yes">Closed</option>
+              </select>
+            </div>
+          </div> 
+
+          <div class="form-group row">
+            <label for="issue_started_at" class="col-4 col-form-label">Issue Started At</label> 
+            <div class="col-8">
+              <div class="input-group date" id="issue_started_at" data-target-input="nearest">
+              <input type="text" class="form-control datetimepicker-input" data-target="#issue_started_at"/>
+              <div class="input-group-append" data-target="#issue_started_at" data-toggle="datetimepicker">
+                <div class="input-group-text"><i class="fa fa-calendar"></i></div>
+              </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="form-group row">
+            <label for="issue_closed_at" class="col-4 col-form-label">Issue Resolved At</label> 
+            <div class="col-8">
+              <div class="input-group date" id="issue_closed_at" data-target-input="nearest">
+              <input type="text" class="form-control datetimepicker-input" data-target="#issue_closed_at"/>
+              <div class="input-group-append" data-target="#issue_closed_at" data-toggle="datetimepicker">
+                <div class="input-group-text"><i class="fa fa-calendar"></i></div>
+              </div>
+              </div>
+            </div>
+          </div>
+		  
+		  <div class="form-group row">
+            <label for="Root_Cause" class="col-4 col-form-label">Root Cause</label> 
+            <div class="col-8">
+              <input id="Root_Cause" name="Root Cause" type="text" class="form-control">
+            </div>
+          </div>
+
+        </form>
+
+        <div>
+          <br>
+        <button id="create_incident" name="create_incident" type="button" class="btn btn-primary">Create Incident Alert</button>
+            <br><br>
+        <div id='generated_msg_view' class="border border-primary p-2"></div>
+        </div>
+     
+        <script type="text/javascript">
+          
+          $(document).ready(function(){
+            $('#issue_started_at, #issue_closed_at').datetimepicker();
+            $("#create_incident").click(function(){
+
+
+              msg = "Issue details: " + $('#issue_details').val()
+              + "<br>" + "Priority: " + $('#priority').val()
+              + "<br>" + "Service Provider/Issue Origin: " + $('#service_provider').val()
+              + "<br>" + "Impact/Affect: " + $('#impact').val()
+              + "<br>" + "Affected Client: " + $('#imapcted_client').val()
+              + "<br>" + "Action taken: " + $('#action_taken').val()
+              + "<br>" +"Client communicated? " + $('#client_communication').val()
+			  + "<br>" +"Root Cause: " + $('#Root_Cause').val()
+
+              if($("#issue_started_at").data("datetimepicker").date())
+              msg = msg + "<br>" + "Issue Started At: " + $("#issue_started_at").data("datetimepicker").date().toLocaleString() 
+              if($("#issue_started_at").data("datetimepicker").date())
+              msg = msg + "<br>" + "Issue Closed At: " + $('#issue_closed_at').data("datetimepicker").date().toLocaleString() 
+
+              $("#generated_msg_view").html(msg);
+   
+            });
+          });
+
+
+        </script>
+
+    </div>
+
+
+
+
+
+
+
+
+</div>
+
+
+
+
+
+
+  </body>
+</html>
