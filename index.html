@@ -172,7 +172,8 @@
           <br>
         <button id="create_incident" name="create_incident" type="button" class="btn btn-primary">Create Incident Alert</button>
             <br><br>
-        <div id='generated_msg_view' class="border border-primary p-2"></div>
+        
+	<div id='generated_msg_view' class="border border-primary p-2 m-3"></div>
         </div>
      
         <script type="text/javascript">
@@ -182,19 +183,19 @@
             $("#create_incident").click(function(){
 
 
-              msg = "Issue details: " + $('#issue_details').val()
-              + "<br>" + "Priority: " + $('#priority').val()
-              + "<br>" + "Service Provider/Issue Origin: " + $('#service_provider').val()
-              + "<br>" + "Impact/Affect: " + $('#impact').val()
-              + "<br>" + "Affected Client: " + $('#imapcted_client').val()
+              msg = "Issue details: " + $('#issue_details').val() + "."
+              + "<br>" + "Priority: " + $('#priority').val() + "."
+              + "<br>" + "Service Provider/Issue Origin: " + $('#service_provider').val() + "."
+              + "<br>" + "Impact/Affect: " + $('#impact').val() + "."
+              + "<br>" + "Affected Client: " + $('#imapcted_client').val() + "."
               + "<br>" + "Action taken: " + $('#action_taken').val()
-              + "<br>" +"Client communicated? " + $('#client_communication').val()
-			  + "<br>" +"Root Cause: " + $('#Root_Cause').val()
+              + "<br>" +"Client communicated? " + $('#client_communication').val() + "."
+			  + "<br>" +"Root Cause: " + $('#Root_Cause').val() + "."
 
               if($("#issue_started_at").data("datetimepicker").date())
-              msg = msg + "<br>" + "Issue Started At: " + $("#issue_started_at").data("datetimepicker").date().toLocaleString() 
+              msg = msg + "<br>" + "Issue Started At: " + $("#issue_started_at").data("datetimepicker").date().toLocaleString() + "."
               if($("#issue_started_at").data("datetimepicker").date())
-              msg = msg + "<br>" + "Issue Closed At: " + $('#issue_closed_at').data("datetimepicker").date().toLocaleString() 
+              msg = msg + "<br>" + "Issue Closed At: " + $('#issue_closed_at').data("datetimepicker").date().toLocaleString() + "." 
 
               $("#generated_msg_view").html(msg);
    
